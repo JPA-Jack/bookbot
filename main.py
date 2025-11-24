@@ -1,5 +1,7 @@
+import sys
+
 def main():
-    a = get_book_text("./books/frankenstein.txt")
+    a = get_book_text(sys.argv[1])
     b = split_words(a)
     c = count_ch(a)
     print(f'Found {b} total words')
@@ -18,5 +20,10 @@ from stats import split_words
 from stats import count_ch
 from stats import split_dict
 from stats import sort_on
+import sys
 
-main()
+if len(sys.argv) == 1:
+    print("Usage: python3 main.py <path_to_book>")
+    sys,exit(1)
+else:
+    main()
