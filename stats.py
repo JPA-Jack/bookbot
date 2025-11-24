@@ -16,5 +16,16 @@ def count_ch (words):
                 ch_dict[ch] = 1
     return ch_dict
     
-    
+def sort_on (items):
+    return items["num"]
+
+def split_dict (dict):
+    dict_list = []
+    dict_to_split = {}
+    for i in dict:
+        dict_to_split["name"] = i
+        dict_to_split["num"] = dict[i]
+        dict_list.append(dict_to_split)
+        dict_to_split = {}
+    return dict_list
 
